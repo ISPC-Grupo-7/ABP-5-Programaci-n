@@ -7,6 +7,8 @@ INSERT INTO Usuario (email, nombre, apellido, contraseña, rol) VALUES
 ('santiago@gmail.com', 'Santiago', 'Hidalgo', 'pass101', 'usuario'),
 ('agustin@gmail.com', 'Agustin', 'Gallardo', 'pass112', 'usuario');
 
+SELECT * FROM Usuario;
+
 INSERT INTO Dispositivo (nombre_dispositivo, tipo, estado) VALUES
 ('luz_sala_estar', 'luz', 'encendido'),
 ('luz_cocina', 'luz', 'apagado'),
@@ -24,12 +26,16 @@ INSERT INTO Dispositivo (nombre_dispositivo, tipo, estado) VALUES
 ('sensor_movimiento_salon', 'sensor', 'apagado'),
 ('cerradura_inteligente', 'cerradura', 'cerrado');
 
+SELECT * FROM Dispositivo;
+
 INSERT INTO Automatizacion (nombre_automatizacion, descripcion, acciones) VALUES
 ('Modo Noche', 'Apaga luces y enciende cámaras para seguridad nocturna.', 'Apagar luces, encender cámaras'),
 ('Modo Día', 'Enciende luces y apaga cámaras.', 'Encender luces, apagar cámaras'),
 ('Bienvenida Casa', 'Enciende luces de entrada y TV.', 'Encender luces, encender TV'),
 ('Salir de Casa', 'Apaga todos los dispositivos.', 'Apagar todos los dispositivos'),
 ('Alarma de Humo', 'Suena alarma, enciende luces de emergencia y notifica.', 'Sonar alarma, encender luces, notificar');
+
+SELECT * FROM Automatizacion;
 
 INSERT INTO Gestion (email_usuario, nombre_dispositivo) VALUES
 ('yazmin@gmail.com', 'luz_sala_estar'),
@@ -41,6 +47,8 @@ INSERT INTO Gestion (email_usuario, nombre_dispositivo) VALUES
 ('santiago@gmail.com', 'luz_cocina'),
 ('agustin@gmail.com', 'termostato');
 
+SELECT * FROM Gestion;
+
 
 INSERT INTO Activacion (email_usuario, nombre_automatizacion, fecha_activacion) VALUES
 ('yazmin@gmail.com', 'Modo Noche', '2025-09-12 21:00:00'),
@@ -49,11 +57,15 @@ INSERT INTO Activacion (email_usuario, nombre_automatizacion, fecha_activacion) 
 ('santiago@gmail.com', 'Modo Noche', '2025-09-11 22:15:00'),
 ('agustin@gmail.com', 'Alarma de Humo', '2025-09-15 01:00:00');
 
+SELECT * FROM Activacion;
+
 INSERT INTO Control (nombre_automatizacion, nombre_dispositivo) VALUES
 ('Modo Noche', 'luz_sala_estar'),
 ('Modo Noche', 'luz_cocina'),
 ('Modo Noche', 'luz_cuarto_principal'),
 ('Modo Noche', 'luz_baño'),
+
+ SELECT * FROM Control; 
 ('Modo Noche', 'camara_puerta'),
 ('Modo Noche', 'camara_jardin'),
 ('Modo Noche', 'camara_habitacion_ninos'),
